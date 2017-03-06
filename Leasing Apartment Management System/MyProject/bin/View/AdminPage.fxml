@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane prefHeight="400.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="Controller.AdminController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Profile">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#viewProfile" text="View" />
+                  </items>
+                   <items>
+                    <MenuItem mnemonicParsing="false" text="Change Password" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Apartment">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#addApt" text="Add" />
+                  </items>
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#viewApt" text="View" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Lease">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="MyLeaseList" />
+                  </items>
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Pending Approval" />
+                  </items>
+                </Menu>
+                 <Menu mnemonicParsing="false" text="Tenant">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="View" />
+                  </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Logout">
+                   <items>
+                    <MenuItem mnemonicParsing="false" onAction="#logOutAdmin" text="Logout" />
+                  </items>
+                  </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
