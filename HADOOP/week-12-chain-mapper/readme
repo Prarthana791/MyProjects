@@ -1,0 +1,9 @@
+1.  Change the map reducer Wordcount program to be two MR jobs - write code for a mapper that will strip out punctuation 
+and emit that output (no reducers), then write a second MR job (basically use the code from WordCount version 1) - note the execution time
+
+For the above requirement, Punctuation.java (1 mapper class, 0 reducer class) is 1st MR job that will remove all punctuations and 
+Count.java (1 mapper class and 1 reducer class) is 2nd MR job that will take output of Punctuation.java as an input and emit word count.
+
+2) Repeat the above code this time using a chain mapper.
+
+For this requirement, Chainmapper.java has chaining functionality (2 mapper and 1 reducer) and will emit word count as an output 
