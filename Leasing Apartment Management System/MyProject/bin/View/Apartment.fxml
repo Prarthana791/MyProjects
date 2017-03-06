@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane prefHeight="300.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ApartmentBook">
+   <children>
+      <TableView fx:id="table" prefHeight="212.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="bldg" prefWidth="99.0" text="Building No.">
+          <cellValueFactory>
+			<PropertyValueFactory property="building_no" />
+			</cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="apt" prefWidth="107.0" text="Apartment No.">
+           <cellValueFactory>
+			<PropertyValueFactory property="apt_no" />
+			</cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="room" prefWidth="79.0" text="Rooms">
+           <cellValueFactory>
+			<PropertyValueFactory property="rooms" />
+			</cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="rent" prefWidth="65.0" text="Rent">
+             <cellValueFactory>
+			<PropertyValueFactory property="base_rent" />
+			</cellValueFactory>
+          </TableColumn>
+           <TableColumn fx:id="rent" prefWidth="65.0" text="Lease Period">
+             <cellValueFactory>
+			<PropertyValueFactory property="leaseperiod" />
+			</cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="rent" prefWidth="65.0" text="Utilities">
+             <cellValueFactory>
+			<PropertyValueFactory property="utilities" />
+			</cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="rent" prefWidth="65.0" text="Total">
+             <cellValueFactory>
+			<PropertyValueFactory property="total" />
+			</cellValueFactory>
+          </TableColumn>
+          
+         </columns>
+      </TableView>
+      <Button fx:id="book" layoutX="28.0" layoutY="253.0" mnemonicParsing="false" text="Book" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="529.0" />
+   </children>
+</AnchorPane>
