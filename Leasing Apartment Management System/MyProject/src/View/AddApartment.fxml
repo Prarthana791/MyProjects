@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.Toggle?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" styleClass="background" stylesheets="@testtheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminController">
+   <children>
+      <GridPane layoutX="27.0" layoutY="22.0" prefHeight="185.0" prefWidth="551.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Building No." />
+            <Label text="Apartment No." GridPane.rowIndex="1" />
+            <Label text="Rent" GridPane.rowIndex="3" />
+            <TextField fx:id="bldgno" prefHeight="25.0" prefWidth="149.0" GridPane.columnIndex="1" />
+            <TextField fx:id="aptno" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              
+            <TextField fx:id="rent" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Rooms" GridPane.rowIndex="2" />
+            <fx:define>
+             <ToggleGroup fx:id="tg" />
+            </fx:define>
+            <RadioButton fx:id="bhk1" mnemonicParsing="false" styleClass="label" text="1 BHK" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tg" />
+               </toggleGroup></RadioButton>
+              
+            <RadioButton fx:id="bhk2" mnemonicParsing="false" styleClass="label" text="2 BHK" toggleGroup="$tg" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <RadioButton fx:id="bhk3" mnemonicParsing="false" styleClass="label" text="3 BHK" toggleGroup="$tg" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label text="Lease Period" GridPane.rowIndex="4" />
+            <CheckBox fx:id="month6" mnemonicParsing="false" onAction="#cb1check" styleClass="label" text="6 Months" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <CheckBox fx:id="month12" mnemonicParsing="false" onAction="#cb2check" styleClass="label" text="12 Months" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <CheckBox fx:id="month18" mnemonicParsing="false" onAction="#cb3check" styleClass="label" text="18 Months" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="Utility Charges" GridPane.rowIndex="5" />
+            <TextField fx:id="charge1" disable="true" editable="false" prefHeight="25.0" prefWidth="106.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="charge2" disable="true" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="charge3" disable="true" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Button fx:id="submit" layoutX="27.0" layoutY="243.0" mnemonicParsing="false" onAction="#Submit" stylesheets="@testtheme.css" text="Submit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane  prefHeight="400.0" prefWidth="850.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="Controller.UserController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="menudata" mnemonicParsing="false" text="Profile">
+                  <items>
+              <MenuItem fx:id="viewp" mnemonicParsing="false" onAction="#viewProfile" text="view" />
+            </items>
+            <items>
+              <MenuItem fx:id="changepwd" mnemonicParsing="false" onAction="#updateProfile" text="Change Password" />
+            </items>
+                </Menu>
+          <Menu fx:id="apartment" mnemonicParsing="false" text="Apartment">
+                   <items>
+              <MenuItem fx:id="viewa" mnemonicParsing="false" onAction="#viewApt" text="View All" />
+            </items>
+            <items>
+              <MenuItem fx:id="myapt" mnemonicParsing="false" onAction="#bookApt" text="My Apartment" />
+            </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Logout">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#logOut" text="Logout" />
+                  </items>
+                </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
