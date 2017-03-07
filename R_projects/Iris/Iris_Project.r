@@ -1,14 +1,3 @@
-utils:::menuInstallPkgs()
-z.test(black,green,alternative="two.sided',mu=0,sigma.x=21186,sigma.y=21272,conf.level=0.95)
-;
-z.test(black,green,alternative="two.sided',mu=0,sigma.x=21186,sigma.y=21272,conf.level=0.95)>
-z.test(black,green,alternative="two.sided',mu=0,sigma.x=21186,sigma.y=21272,conf.level=0.95)
-z.test(help)
-help(z.test)
-??z.test
-q()
-q()
-q()
 mydata=read.table("energytemp.txt",header=T)
 ENERGY=mydata$energy
 TEMPD=mydata$temp
