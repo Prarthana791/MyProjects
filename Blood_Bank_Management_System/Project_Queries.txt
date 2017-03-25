@@ -1,0 +1,84 @@
+1) To display the pouch ID's and the fridge ID,for a selected blood group.  
+
+select s.pouch_id,s.fridge_id
+from BloodStorage s,Blood 
+where s.pouch_id=b.pouch_d
+and b.blood_group= 'AB+'
+
+
+
+2) To display the details of the donors for the selected blood group.
+
+select donor_id,donor_name,contact_no,last_donation_date
+from Donor 
+where blood_group='AB+'
+
+
+3) To display the details of the donors who donated blood in the selected year.
+
+SELECT donor_id,donor_name,blood_group,contact_no,last_donation_date 
+FROM Donor 
+WHERE to_char(last_donation_date,'yyyy')='2012' 
+ORDER BY blood_group
+
+
+4) To display the fridge details and their current capacities.
+
+
+select * from Fridge
+
+
+
+5) To display the pouch ID's and their results that the selected employee had tested.
+
+
+select pouch_id,hiv_I,hiv_II,vdrl,malaria,hepatitis_b,hepatitis_c,result
+FROM Test 
+WHERE e_id='E1' 
+
+
+
+6) To display the details of all the employees in the blood bank
+
+
+select * from Employees
+
+
+
+
+7) To display details of all the donors
+
+
+select * from Donor
+
+
+
+8) To display details of all the recipients
+
+select * from Recipient
+
+
+
+9) To display the details of pure blood pouches(in storage)
+
+
+select * from BloodStorage
+
+
+
+10) To display the details of the test and their results upon all the blood pouches.
+    The result can be either 'PURE BLOOD' or 'IMPURE BLOOD'.
+
+
+select * from Test
+
+
+
+11) To display of the details of all the blood pouches(both TESTED and UNTESTED)
+
+
+select * from Blood
+
+  
+----------------------------------------------------------------
+
